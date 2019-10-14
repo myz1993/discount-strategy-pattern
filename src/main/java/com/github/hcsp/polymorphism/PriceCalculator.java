@@ -1,5 +1,7 @@
 package com.github.hcsp.polymorphism;
 
+import com.sun.javaws.IconUtil;
+
 public class PriceCalculator {
     // 使用策略模式重构这个方法，实现三个策略：
     // NoDiscountStrategy 不打折
@@ -7,22 +9,7 @@ public class PriceCalculator {
     // OnlyVipDiscountStrategy 只有VIP打95折，其他人保持原价
     // 重构后的方法签名：
     // public static int calculatePrice(DiscountStrategy strategy, int price, User user)
-    public static int calculatePrice(String discountStrategy, int price, User user) {
-        switch (discountStrategy) {
-            case "NoDiscount":
-                return price;
-            case "Discount95":
-                return (int) (price * 0.95);
-            case "OnlyVip":
-                {
-                    if (user.isVip()) {
-                        return (int) (price * 0.95);
-                    } else {
-                        return price;
-                    }
-                }
-            default:
-                throw new IllegalStateException("Should not be here!");
+        public static int calculatePrice(DiscountStrategy strategy, int price, User user){
+            return  strategy.discount(price,user);
         }
-    }
 }
