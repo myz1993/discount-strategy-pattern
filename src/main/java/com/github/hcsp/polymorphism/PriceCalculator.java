@@ -11,4 +11,5 @@ public class PriceCalculator {
 
         return discountStrategy.discount(price,user);
     }
+
 }

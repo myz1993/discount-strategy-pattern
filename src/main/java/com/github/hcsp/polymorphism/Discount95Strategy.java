@@ -5,4 +5,5 @@ public class Discount95Strategy extends DiscountStrategy {
     public int discount(int price, User user) {
         return price*95/100;
     }
+
 }
