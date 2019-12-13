@@ -1,8 +1,7 @@
 package com.github.hcsp.polymorphism;
 
-public abstract class DiscountStrategy {
-	
-    public static int discount(int price, User user) {
-		return price;
+public class DiscountStrategy {
+    public int discount(int price, User user) {
+        throw new UnsupportedOperationException();
     }
 }
