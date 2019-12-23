@@ -1,3 +1,7 @@
 package com.github.hcsp.polymorphism;
 
-public class NoDiscountStrategy {}
+public class NoDiscountStrategy extends DiscountStrategy{
+    public NoDiscountStrategy() {
+        super();
+    }
+}
