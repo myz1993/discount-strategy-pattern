@@ -4,9 +4,6 @@ public class OnlyVipDiscountStrategy extends DiscountStrategy {
 
     @Override
     public int discount(int price, User user) {
-        if (user.isVip()) {
-            return (int) (price * 0.95);
-        }
-        return price;
+        return user.isVip() ? (int) (price * 0.95) : price;
     }
 }
