@@ -1,6 +1,6 @@
 package com.github.hcsp.polymorphism;
 
-public class User extends DiscountStrategy {
+public class User {
     private String name;
     private boolean vip;
 
