@@ -1,10 +1,10 @@
 package com.github.hcsp.polymorphism;
 
-public class OnlyVipDiscountStrategy extends DiscountStrategy{
+public class OnlyVipDiscountStrategy extends DiscountStrategy {
     public int discount(int price, User user) {
-        if (user.isVip()){
+        if (user.isVip()) {
             return (int) (price * 0.95);
-        }else {
+        } else {
             return price;
         }
     }
