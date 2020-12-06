@@ -1,7 +1,6 @@
 package com.github.hcsp.polymorphism;
 
 public class User {
-    //姓名和VIP信息
     private String name;
     private boolean vip;
 
