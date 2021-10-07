@@ -1,6 +1,6 @@
 package com.github.hcsp.polymorphism;
 
-public class User {            //顾客 连个属性 名字和 是否vip
+public class User {
     private String name;
     private boolean vip;
 
@@ -9,11 +9,11 @@ public class User {            //顾客 连个属性 名字和 是否vip
         this.vip = vip;
     }
 
-    public static User vip(String name) {          //工厂方法创建对象
+    public static User vip(String name) {
         return new User(name, true);
     }
 
-    public static User dios(String name) {       //工厂方法创建对象
+    public static User dios(String name) {
         return new User(name, false);
     }
 
